@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 const Recipe = props => (
 		<div className='container'>
@@ -15,7 +15,9 @@ const Recipe = props => (
         						</h5>
         						<p className="recipes__subtitle">Publisher: <span>{recipes.publisher}</span></p>
         					</div>
-        					<button className="recipe_buttons">View Recipe</button>
+        					<button className="recipe_buttons">
+        					<Link to={{ pathname: `/recipe/${recipes.recipe_id}`}}>View Recipe</Link> 
+        					</button>
         				</div>
         			</div>
         		);
